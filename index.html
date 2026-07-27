@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Convite — Casamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="book" aria-label="Convite digital">
+      <div class="pages">
+        <section class="page" data-title="Capa">
+          <div class="page-inner">
+            <div class="cover-photo" aria-hidden="true">Foto do casal</div>
+            <h1>Carlos & Maria</h1>
+            <p class="subtitle">Você está convidado para o nosso casamento</p>
+          </div>
+        </section>
+
+        <section class="page" data-title="Evento">
+          <div class="page-inner">
+            <h2>Detalhes do Evento</h2>
+            <p>Data: 01 de Janeiro de 2027<br>
+            Cerimônia: Igreja Exemplo — 16:00<br>
+            Recepção: Espaço Celebra — 18:00</p>
+            <p class="note">Traje: Passeio completo</p>
+          </div>
+        </section>
+
+        <section class="page" data-title="Mapa">
+          <div class="page-inner">
+            <h2>Como chegar</h2>
+            <div class="map-wrap">
+              <!-- Substitua o src do iframe pelo link do seu Google Maps ou use um link simples -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086..." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p><a href="#" id="open-maps">Abrir no Maps</a></p>
+          </div>
+        </section>
+
+        <section class="page" data-title="Presentes">
+          <div class="page-inner">
+            <h2>Lista de Presentes</h2>
+            <ul class="gifts">
+              <li>Contribuição para lua de mel — <a href="#">Ver opções</a></li>
+              <li>Loja A — <a href="#">Link</a></li>
+              <li>Loja B — <a href="#">Link</a></li>
+            </ul>
+            <p class="thanks">A presença de vocês já é o nosso maior presente.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <nav class="controls" aria-label="Navegação do convite">
+        <button id="prev" aria-label="Página anterior">Anterior</button>
+        <output id="page-indicator" aria-live="polite">1 / 4</output>
+        <button id="next" aria-label="Próxima página">Próxima</button>
+      </nav>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

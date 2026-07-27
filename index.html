@@ -1,66 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Convite — Casamento</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <main class="container">
-    <div class="book" aria-label="Convite digital">
-      <div class="pages">
-        <section class="page" data-title="Capa">
-          <div class="page-inner">
-            <div class="cover-photo" aria-hidden="true">Foto do casal</div>
-            <h1>Carlos & Maria</h1>
-            <p class="subtitle">Você está convidado para o nosso casamento</p>
-          </div>
-        </section>
-
-        <section class="page" data-title="Evento">
-          <div class="page-inner">
-            <h2>Detalhes do Evento</h2>
-            <p>Data: 01 de Janeiro de 2027<br>
-            Cerimônia: Igreja Exemplo — 16:00<br>
-            Recepção: Espaço Celebra — 18:00</p>
-            <p class="note">Traje: Passeio completo</p>
-          </div>
-        </section>
-
-        <section class="page" data-title="Mapa">
-          <div class="page-inner">
-            <h2>Como chegar</h2>
-            <div class="map-wrap">
-              <!-- Substitua o src do iframe pelo link do seu Google Maps ou use um link simples -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086..." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container">
+        <!-- Página 1: Apresentação -->
+        <div class="page page-1 active">
+            <div class="page-content">
+                <div class="celebration-animation">
+                    <span class="confetti">🎉</span>
+                    <span class="confetti">💍</span>
+                    <span class="confetti">🎊</span>
+                </div>
+                <h1 class="main-title" contenteditable="true">Estamos nos Casando!</h1>
+                <div class="names" contenteditable="true">
+                    <p class="bride">Maria & João</p>
+                </div>
+                <p class="save-date" contenteditable="true">Você está convidado a celebrar conosco!</p>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background-color: #D4AF37;"></div>
+                    <div class="color-swatch" style="background-color: #2C3E50;"></div>
+                    <div class="color-swatch" style="background-color: #ECF0F1;"></div>
+                    <div class="color-swatch" style="background-color: #E8B4A8;"></div>
+                </div>
+                <div class="page-indicator">
+                    <span class="dot active" onclick="goToPage(0)"></span>
+                    <span class="dot" onclick="goToPage(1)"></span>
+                    <span class="dot" onclick="goToPage(2)"></span>
+                    <span class="dot" onclick="goToPage(3)"></span>
+                </div>
             </div>
-            <p><a href="#" id="open-maps">Abrir no Maps</a></p>
-          </div>
-        </section>
+        </div>
 
-        <section class="page" data-title="Presentes">
-          <div class="page-inner">
-            <h2>Lista de Presentes</h2>
-            <ul class="gifts">
-              <li>Contribuição para lua de mel — <a href="#">Ver opções</a></li>
-              <li>Loja A — <a href="#">Link</a></li>
-              <li>Loja B — <a href="#">Link</a></li>
-            </ul>
-            <p class="thanks">A presença de vocês já é o nosso maior presente.</p>
-          </div>
-        </section>
+        <!-- Página 2: Detalhes do Casamento -->
+        <div class="page page-2">
+            <div class="page-content">
+                <h2 class="page-title" contenteditable="true">Celebração</h2>
+                
+                <div class="wedding-details">
+                    <div class="detail-box">
+                        <h3 contenteditable="true">Data</h3>
+                        <p class="editable-date" contenteditable="true">15 de Junho de 2025</p>
+                    </div>
 
-      </div>
+                    <div class="detail-box">
+                        <h3 contenteditable="true">Horário</h3>
+                        <p contenteditable="true">19h00</p>
+                    </div>
 
-      <nav class="controls" aria-label="Navegação do convite">
-        <button id="prev" aria-label="Página anterior">Anterior</button>
-        <output id="page-indicator" aria-live="polite">1 / 4</output>
-        <button id="next" aria-label="Próxima página">Próxima</button>
-      </nav>
+                    <div class="detail-box">
+                        <h3 contenteditable="true">Local</h3>
+                        <p contenteditable="true">Salão de Festas Beleza<br>Rua das Flores, 123</p>
+                    </div>
+                </div>
+
+                <div class="wedding-text" contenteditable="true">
+                    <p>Convidamos você e sua família para compartilhar este momento especial de nossas vidas. Sua presença é a maior prenda que poderíamos receber.</p>
+                </div>
+
+                <div class="instructions-section">
+                    <h3 contenteditable="true">Instruções para os Padrinhos</h3>
+                    <ul contenteditable="true">
+                        <li>Estar presentes 1 hora antes da cerimônia</li>
+                        <li>Trajar elegantemente conforme orientação</li>
+                        <li>Coordenar com os organizadores para as fotos</li>
+                        <li>Ajudar na recepção dos convidados</li>
+                    </ul>
+                </div>
+
+                <div class="color-info" contenteditable="true">
+                    <p><strong>Paleta de Cores:</strong> Ouro, Azul Marinho, Branco e Rosa Pêssego</p>
+                </div>
+
+                <div class="page-indicator">
+                    <span class="dot" onclick="goToPage(0)"></span>
+                    <span class="dot active" onclick="goToPage(1)"></span>
+                    <span class="dot" onclick="goToPage(2)"></span>
+                    <span class="dot" onclick="goToPage(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 3: Mapa -->
+        <div class="page page-3">
+            <div class="page-content">
+                <h2 class="page-title" contenteditable="true">Localização</h2>
+                
+                <div class="location-info" contenteditable="true">
+                    <h3>Salão de Festas Beleza</h3>
+                    <p>Rua das Flores, 123</p>
+                    <p>São Paulo, SP - 01234-567</p>
+                    <p>Telefone: (11) 98765-4321</p>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.434517314258!2d-46.656436!3d-23.550520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0f0001%3A0xab35da2f5ca62674!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="directions-info" contenteditable="true">
+                    <h4>Como Chegar:</h4>
+                    <p>Estacionamento disponível no local. Entrada pela Rua das Flores.</p>
+                </div>
+
+                <div class="page-indicator">
+                    <span class="dot" onclick="goToPage(0)"></span>
+                    <span class="dot" onclick="goToPage(1)"></span>
+                    <span class="dot active" onclick="goToPage(2)"></span>
+                    <span class="dot" onclick="goToPage(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 4: Lista de Presentes -->
+        <div class="page page-4">
+            <div class="page-content">
+                <h2 class="page-title" contenteditable="true">Lista de Presentes</h2>
+                
+                <div class="gifts-intro" contenteditable="true">
+                    <p>A sua presença é o melhor presente! Mas se desejar presentear-nos, aqui estão algumas sugestões:</p>
+                </div>
+
+                <div class="gifts-grid">
+                    <div class="gift-item" contenteditable="true">
+                        <div class="gift-icon">🛏️</div>
+                        <h4>Cama</h4>
+                        <p>Jogo de cama premium</p>
+                    </div>
+
+                    <div class="gift-item" contenteditable="true">
+                        <div class="gift-icon">🍽️</div>
+                        <h4>Louças</h4>
+                        <p>Jogo de louças elegante</p>
+                    </div>
+
+                    <div class="gift-item" contenteditable="true">
+                        <div class="gift-icon">🚀</div>
+                        <h4>Viagem</h4>
+                        <p>Ajude com a lua de mel</p>
+                    </div>
+
+                    <div class="gift-item" contenteditable="true">
+                        <div class="gift-icon">🛋️</div>
+                        <h4>Móveis</h4>
+                        <p>Peças para o lar</p>
+                    </div>
+                </div>
+
+                <div class="gift-links" contenteditable="true">
+                    <p><strong>Lojas Parceiras:</strong></p>
+                    <p>🔗 www.exemplo-loja.com.br</p>
+                    <p>🔗 www.lista-presentes.com.br</p>
+                </div>
+
+                <div class="page-indicator">
+                    <span class="dot" onclick="goToPage(0)"></span>
+                    <span class="dot" onclick="goToPage(1)"></span>
+                    <span class="dot" onclick="goToPage(2)"></span>
+                    <span class="dot active" onclick="goToPage(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles de Navegação -->
+        <div class="navigation-controls">
+            <button class="nav-btn prev-btn" onclick="previousPage()" title="Página Anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn next-btn" onclick="nextPage()" title="Próxima Página">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Botão de Edição -->
+        <button class="edit-btn" onclick="toggleEditMode()" title="Modo Edição">
+            <i class="fas fa-edit"></i> Editar
+        </button>
+
+        <!-- Botão de Download/Print -->
+        <button class="print-btn" onclick="window.print()" title="Imprimir">
+            <i class="fas fa-print"></i> Imprimir
+        </button>
     </div>
-  </main>
 
-  <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
